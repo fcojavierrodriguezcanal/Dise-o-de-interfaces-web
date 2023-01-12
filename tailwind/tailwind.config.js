@@ -1,11 +1,16 @@
 module.exports = {
     theme: {
-        fontFamily: {
-            'nunito': ['nunito', 'sans-serif'],
-            'MyFont': ['"My Font"', 'serif'] 
-          },
-        variants:{},
-        plugins: []
+        extends: {
+            fontFamily: {
+                'nunito': ['nunito', 'sans-serif'],
+                'MyFont': ['"My Font"', 'serif'] 
+            },
+            colors: {
+                
+            },
+            variants:{},
+            plugins: []
+        }
     }
     
 }
