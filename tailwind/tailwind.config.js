@@ -1,11 +1,22 @@
 
 module.exports = {
+  variants: {
+    extend: {
+      animation: ['responsive', 'hover', 'group-hover'],
+      fontSize: ['responsive', 'hover', 'group-hover'],
+      transform: ['responsive', 'hover', 'group-hover'],
+      scale: ['responsive', 'hover', 'group-hover'],
+    }
+  },
   theme: {
     extend: {
+      
       fontFamily: {
         bebas: ['Bebas Neue', 'serif'],
       },
-
+      borderWidth: {
+        '10': '10px',
+      },
       colors: {
         'blue-ocean': '#37bcf9',
         transparent: 'transparent',
