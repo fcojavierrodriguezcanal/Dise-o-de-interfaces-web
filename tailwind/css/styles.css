@@ -11,7 +11,13 @@ Document
 Use a better box model (opinionated).
 */
 @font-face{
-  font-family: "WebSymbolsRegular";
+  font-family: "BebasNeue";
+  src: url('fonts/BebasNeue.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: "WebSymbols";
   src: url('fonts/websymbols-regular-webfont.eot');
   src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
        url('fonts/websymbols-regular-webfont.woff') format('woff'),
@@ -21,7 +27,10 @@ Use a better box model (opinionated).
   font-style: normal;
 }
 .gear, .icon{
-  font-family: "WebSymbolsRegular"; 
+  font-family: "WebSymbols"; 
+}
+.ejemplofuente{
+  font-family: "BebasNeue";
 }
 *,
 ::before,

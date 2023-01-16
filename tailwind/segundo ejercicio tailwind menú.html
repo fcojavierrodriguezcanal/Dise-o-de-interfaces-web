@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>segundo ejercicio Tailwind</title>
-    <style>
-      </style>
-</head>
-<body>
-    <header id="header">
-        <div class="w-wrap">
-            <div id="logo">
-                <span class="gear">S</span>
-                <h3>BLOG</h3>
-            </div>
-    <nav id="menu">
-        <ul>
-            <li><a href="#">INICIO</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">FORMACIÓN</a></li>
-            <li><a href="#">CONTACTO</a></li>
-        </ul>
-    </nav>
-</div>
-</header>
-</body>
+    <style></style>
+  </head>
+  <body>
+    <header id="header" class="h-20 w-full bg-black text-white">
+      <div class="w-wrap">
+        <div id="logo" class="bg-blue-ocean transition-all-300ms float-left mt-5 ml-5 block w-48 cursor-pointer overflow-hidden text-center tracking-tight transition hover:rounded-sm hover:bg-gray-200 hover:text-black">
+          <span class="gear hover:rotate-gear inline-block animate-spin text-3xl">S</span>
+          <h3 class="ejemplofuente transition-all-300ms hover: animation fromRight float-right mt-1 mr-16 block text-4xl transition">BLOG</h3>
+        </div>
+        <nav id="menu" class="ejemplofuente float-right h-20 bg-transparent mt-5 mr-50 flex-row">
+          <ul>
+            <li class="mr-5 ml-5 inline-block text-2xl leading-10 tracking-wider">
+              <a href="#" class="transition-all-200ms block text-white no-underline transition"><p class="hover:scale-125 text-blue-ocean">INICIO</p></a>
+            </li>
+            <li class="mr-5 ml-5 inline-block text-2xl leading-10 tracking-wider">
+                <a href="#" class="transition-all-200ms block text-white no-underline transition"><p class="hover:scale-125 text-blue-ocean">BLOG</p></a>
+            </li>
+            <li class="mr-5 ml-5 inline-block text-2xl leading-10 tracking-wider">
+                <a href="#" class="transition-all-200ms block text-white no-underline transition"><p class="hover:scale-125 text-blue-ocean">FORMACION</p></a>
+            </li>
+            <li class="mr-5 ml-5 inline-block text-2xl leading-10 tracking-wider">
+                <a href="#" class="transition-all-200ms block text-white no-underline transition"><p class="hover:scale-125 text-blue-ocean">CONTACTO</p></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body>
 </html>
