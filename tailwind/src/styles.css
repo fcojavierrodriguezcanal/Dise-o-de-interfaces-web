@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-font-face{
+@font-face{
     font-family: "BebasNeue";
     src: url("./fonts/BebasNeue.otf");
     
 }
-.
+.fuente1{
+    font-family: "BebasNeue";
+}
 .bannerfondo{
 background-image: url(./imgs/bakbaner.png);
 }
