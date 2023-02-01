@@ -10181,6 +10181,37 @@ video {
   }
 }
 
+@keyframes showCategory {
+  from {
+    transform: translateY(-300%) color:black;
+  }
+
+  to {
+    transform: translateY(0%) color: white;
+  }
+}
+
+@keyframes backBanner {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -200px -200px;
+  }
+}
+
+@keyframes showDescription {
+  from {
+    transform: translateX(-300%);
+    color: black;
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
 .animate-none {
   animation: none;
 }
@@ -10211,6 +10242,18 @@ video {
 
 .animate-fromRight {
   animation: fromRight 300ms linear alternate;
+}
+
+.animate-showCategory {
+  animation: showCategory 400ms linear;
+}
+
+.animate-backBanner {
+  animation: backBanner 10s linear;
+}
+
+.animate-showDescription {
+  animation: showDescription 400ms linear;
 }
 
 .group:hover .group-hover\:animate-none {
@@ -10245,6 +10288,18 @@ video {
   animation: fromRight 300ms linear alternate;
 }
 
+.group:hover .group-hover\:animate-showCategory {
+  animation: showCategory 400ms linear;
+}
+
+.group:hover .group-hover\:animate-backBanner {
+  animation: backBanner 10s linear;
+}
+
+.group:hover .group-hover\:animate-showDescription {
+  animation: showDescription 400ms linear;
+}
+
 .hover\:animate-none:hover {
   animation: none;
 }
@@ -10275,6 +10330,18 @@ video {
 
 .hover\:animate-fromRight:hover {
   animation: fromRight 300ms linear alternate;
+}
+
+.hover\:animate-showCategory:hover {
+  animation: showCategory 400ms linear;
+}
+
+.hover\:animate-backBanner:hover {
+  animation: backBanner 10s linear;
+}
+
+.hover\:animate-showDescription:hover {
+  animation: showDescription 400ms linear;
 }
 
 .cursor-auto {
@@ -26633,6 +26700,11 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-cartashadow {
+  --tw-shadow: 1px 1px 2px #ddd;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .group:hover .group-hover\:shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -26670,6 +26742,11 @@ video {
 
 .group:hover .group-hover\:shadow-none {
   --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.group:hover .group-hover\:shadow-cartashadow {
+  --tw-shadow: 1px 1px 2px #ddd;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -26713,6 +26790,11 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.focus-within\:shadow-cartashadow:focus-within {
+  --tw-shadow: 1px 1px 2px #ddd;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .hover\:shadow-sm:hover {
   --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -26753,6 +26835,11 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:shadow-cartashadow:hover {
+  --tw-shadow: 1px 1px 2px #ddd;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .focus\:shadow-sm:focus {
   --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -26790,6 +26877,11 @@ video {
 
 .focus\:shadow-none:focus {
   --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus\:shadow-cartashadow:focus {
+  --tw-shadow: 1px 1px 2px #ddd;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -29814,14 +29906,42 @@ video {
   content: none;
 }
 
-font-face{
+@font-face{
   font-family: "BebasNeue";
+
   src: url("./fonts/BebasNeue.otf");
 }
 
-.
+@font-face{
+  font-family: "websymbols";
+
+  src: url("./fonts/websymbols-regular-webfont.ttf");
+}
+
+.fuente1{
+  font-family: "BebasNeue";
+}
+
+.fuentesimbolo{
+  font-family: "websymbols";
+}
+
 .bannerfondo{
   background-image: url(./imgs/bakbaner.png);
+}
+
+@keyframes animate-backBanner{
+  0%{
+    background-position: 0px 0px;
+  }
+
+  100%{
+    background-position: -200px -200px;
+  }
+}
+
+.animate-backBanner{
+  animation: backBanner 10s linear;
 }
 
 @media (min-width: 640px) {
@@ -39379,6 +39499,18 @@ font-face{
     animation: fromRight 300ms linear alternate;
   }
 
+  .sm\:animate-showCategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .sm\:animate-backBanner {
+    animation: backBanner 10s linear;
+  }
+
+  .sm\:animate-showDescription {
+    animation: showDescription 400ms linear;
+  }
+
   .group:hover .sm\:group-hover\:animate-none {
     animation: none;
   }
@@ -39411,6 +39543,18 @@ font-face{
     animation: fromRight 300ms linear alternate;
   }
 
+  .group:hover .sm\:group-hover\:animate-showCategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .group:hover .sm\:group-hover\:animate-backBanner {
+    animation: backBanner 10s linear;
+  }
+
+  .group:hover .sm\:group-hover\:animate-showDescription {
+    animation: showDescription 400ms linear;
+  }
+
   .sm\:hover\:animate-none:hover {
     animation: none;
   }
@@ -39441,6 +39585,18 @@ font-face{
 
   .sm\:hover\:animate-fromRight:hover {
     animation: fromRight 300ms linear alternate;
+  }
+
+  .sm\:hover\:animate-showCategory:hover {
+    animation: showCategory 400ms linear;
+  }
+
+  .sm\:hover\:animate-backBanner:hover {
+    animation: backBanner 10s linear;
+  }
+
+  .sm\:hover\:animate-showDescription:hover {
+    animation: showDescription 400ms linear;
   }
 
   .sm\:cursor-auto {
@@ -55503,6 +55659,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .sm\:shadow-cartashadow {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .group:hover .sm\:group-hover\:shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -55540,6 +55701,11 @@ font-face{
 
   .group:hover .sm\:group-hover\:shadow-none {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .sm\:group-hover\:shadow-cartashadow {
+    --tw-shadow: 1px 1px 2px #ddd;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -55583,6 +55749,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .sm\:focus-within\:shadow-cartashadow:focus-within {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .sm\:hover\:shadow-sm:hover {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -55623,6 +55794,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .sm\:hover\:shadow-cartashadow:hover {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .sm\:focus\:shadow-sm:focus {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -55660,6 +55836,11 @@ font-face{
 
   .sm\:focus\:shadow-none:focus {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm\:focus\:shadow-cartashadow:focus {
+    --tw-shadow: 1px 1px 2px #ddd;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -68227,6 +68408,18 @@ font-face{
     animation: fromRight 300ms linear alternate;
   }
 
+  .md\:animate-showCategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .md\:animate-backBanner {
+    animation: backBanner 10s linear;
+  }
+
+  .md\:animate-showDescription {
+    animation: showDescription 400ms linear;
+  }
+
   .group:hover .md\:group-hover\:animate-none {
     animation: none;
   }
@@ -68259,6 +68452,18 @@ font-face{
     animation: fromRight 300ms linear alternate;
   }
 
+  .group:hover .md\:group-hover\:animate-showCategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .group:hover .md\:group-hover\:animate-backBanner {
+    animation: backBanner 10s linear;
+  }
+
+  .group:hover .md\:group-hover\:animate-showDescription {
+    animation: showDescription 400ms linear;
+  }
+
   .md\:hover\:animate-none:hover {
     animation: none;
   }
@@ -68289,6 +68494,18 @@ font-face{
 
   .md\:hover\:animate-fromRight:hover {
     animation: fromRight 300ms linear alternate;
+  }
+
+  .md\:hover\:animate-showCategory:hover {
+    animation: showCategory 400ms linear;
+  }
+
+  .md\:hover\:animate-backBanner:hover {
+    animation: backBanner 10s linear;
+  }
+
+  .md\:hover\:animate-showDescription:hover {
+    animation: showDescription 400ms linear;
   }
 
   .md\:cursor-auto {
@@ -84351,6 +84568,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .md\:shadow-cartashadow {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .group:hover .md\:group-hover\:shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -84388,6 +84610,11 @@ font-face{
 
   .group:hover .md\:group-hover\:shadow-none {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .md\:group-hover\:shadow-cartashadow {
+    --tw-shadow: 1px 1px 2px #ddd;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -84431,6 +84658,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .md\:focus-within\:shadow-cartashadow:focus-within {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .md\:hover\:shadow-sm:hover {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -84471,6 +84703,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .md\:hover\:shadow-cartashadow:hover {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .md\:focus\:shadow-sm:focus {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -84508,6 +84745,11 @@ font-face{
 
   .md\:focus\:shadow-none:focus {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:focus\:shadow-cartashadow:focus {
+    --tw-shadow: 1px 1px 2px #ddd;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -97075,6 +97317,18 @@ font-face{
     animation: fromRight 300ms linear alternate;
   }
 
+  .lg\:animate-showCategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .lg\:animate-backBanner {
+    animation: backBanner 10s linear;
+  }
+
+  .lg\:animate-showDescription {
+    animation: showDescription 400ms linear;
+  }
+
   .group:hover .lg\:group-hover\:animate-none {
     animation: none;
   }
@@ -97107,6 +97361,18 @@ font-face{
     animation: fromRight 300ms linear alternate;
   }
 
+  .group:hover .lg\:group-hover\:animate-showCategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .group:hover .lg\:group-hover\:animate-backBanner {
+    animation: backBanner 10s linear;
+  }
+
+  .group:hover .lg\:group-hover\:animate-showDescription {
+    animation: showDescription 400ms linear;
+  }
+
   .lg\:hover\:animate-none:hover {
     animation: none;
   }
@@ -97137,6 +97403,18 @@ font-face{
 
   .lg\:hover\:animate-fromRight:hover {
     animation: fromRight 300ms linear alternate;
+  }
+
+  .lg\:hover\:animate-showCategory:hover {
+    animation: showCategory 400ms linear;
+  }
+
+  .lg\:hover\:animate-backBanner:hover {
+    animation: backBanner 10s linear;
+  }
+
+  .lg\:hover\:animate-showDescription:hover {
+    animation: showDescription 400ms linear;
   }
 
   .lg\:cursor-auto {
@@ -113199,6 +113477,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .lg\:shadow-cartashadow {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .group:hover .lg\:group-hover\:shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -113236,6 +113519,11 @@ font-face{
 
   .group:hover .lg\:group-hover\:shadow-none {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .lg\:group-hover\:shadow-cartashadow {
+    --tw-shadow: 1px 1px 2px #ddd;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -113279,6 +113567,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .lg\:focus-within\:shadow-cartashadow:focus-within {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .lg\:hover\:shadow-sm:hover {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -113319,6 +113612,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .lg\:hover\:shadow-cartashadow:hover {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .lg\:focus\:shadow-sm:focus {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -113356,6 +113654,11 @@ font-face{
 
   .lg\:focus\:shadow-none:focus {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:focus\:shadow-cartashadow:focus {
+    --tw-shadow: 1px 1px 2px #ddd;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -125923,6 +126226,18 @@ font-face{
     animation: fromRight 300ms linear alternate;
   }
 
+  .xl\:animate-showCategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .xl\:animate-backBanner {
+    animation: backBanner 10s linear;
+  }
+
+  .xl\:animate-showDescription {
+    animation: showDescription 400ms linear;
+  }
+
   .group:hover .xl\:group-hover\:animate-none {
     animation: none;
   }
@@ -125955,6 +126270,18 @@ font-face{
     animation: fromRight 300ms linear alternate;
   }
 
+  .group:hover .xl\:group-hover\:animate-showCategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .group:hover .xl\:group-hover\:animate-backBanner {
+    animation: backBanner 10s linear;
+  }
+
+  .group:hover .xl\:group-hover\:animate-showDescription {
+    animation: showDescription 400ms linear;
+  }
+
   .xl\:hover\:animate-none:hover {
     animation: none;
   }
@@ -125985,6 +126312,18 @@ font-face{
 
   .xl\:hover\:animate-fromRight:hover {
     animation: fromRight 300ms linear alternate;
+  }
+
+  .xl\:hover\:animate-showCategory:hover {
+    animation: showCategory 400ms linear;
+  }
+
+  .xl\:hover\:animate-backBanner:hover {
+    animation: backBanner 10s linear;
+  }
+
+  .xl\:hover\:animate-showDescription:hover {
+    animation: showDescription 400ms linear;
   }
 
   .xl\:cursor-auto {
@@ -142047,6 +142386,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .xl\:shadow-cartashadow {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .group:hover .xl\:group-hover\:shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -142084,6 +142428,11 @@ font-face{
 
   .group:hover .xl\:group-hover\:shadow-none {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .xl\:group-hover\:shadow-cartashadow {
+    --tw-shadow: 1px 1px 2px #ddd;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -142127,6 +142476,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .xl\:focus-within\:shadow-cartashadow:focus-within {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .xl\:hover\:shadow-sm:hover {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -142167,6 +142521,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .xl\:hover\:shadow-cartashadow:hover {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .xl\:focus\:shadow-sm:focus {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -142204,6 +142563,11 @@ font-face{
 
   .xl\:focus\:shadow-none:focus {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .xl\:focus\:shadow-cartashadow:focus {
+    --tw-shadow: 1px 1px 2px #ddd;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -154771,6 +155135,18 @@ font-face{
     animation: fromRight 300ms linear alternate;
   }
 
+  .\32xl\:animate-showCategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .\32xl\:animate-backBanner {
+    animation: backBanner 10s linear;
+  }
+
+  .\32xl\:animate-showDescription {
+    animation: showDescription 400ms linear;
+  }
+
   .group:hover .\32xl\:group-hover\:animate-none {
     animation: none;
   }
@@ -154803,6 +155179,18 @@ font-face{
     animation: fromRight 300ms linear alternate;
   }
 
+  .group:hover .\32xl\:group-hover\:animate-showCategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-backBanner {
+    animation: backBanner 10s linear;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-showDescription {
+    animation: showDescription 400ms linear;
+  }
+
   .\32xl\:hover\:animate-none:hover {
     animation: none;
   }
@@ -154833,6 +155221,18 @@ font-face{
 
   .\32xl\:hover\:animate-fromRight:hover {
     animation: fromRight 300ms linear alternate;
+  }
+
+  .\32xl\:hover\:animate-showCategory:hover {
+    animation: showCategory 400ms linear;
+  }
+
+  .\32xl\:hover\:animate-backBanner:hover {
+    animation: backBanner 10s linear;
+  }
+
+  .\32xl\:hover\:animate-showDescription:hover {
+    animation: showDescription 400ms linear;
   }
 
   .\32xl\:cursor-auto {
@@ -170895,6 +171295,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .\32xl\:shadow-cartashadow {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .group:hover .\32xl\:group-hover\:shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -170932,6 +171337,11 @@ font-face{
 
   .group:hover .\32xl\:group-hover\:shadow-none {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .\32xl\:group-hover\:shadow-cartashadow {
+    --tw-shadow: 1px 1px 2px #ddd;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -170975,6 +171385,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .\32xl\:focus-within\:shadow-cartashadow:focus-within {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .\32xl\:hover\:shadow-sm:hover {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -171015,6 +171430,11 @@ font-face{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .\32xl\:hover\:shadow-cartashadow:hover {
+    --tw-shadow: 1px 1px 2px #ddd;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .\32xl\:focus\:shadow-sm:focus {
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -171052,6 +171472,11 @@ font-face{
 
   .\32xl\:focus\:shadow-none:focus {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .\32xl\:focus\:shadow-cartashadow:focus {
+    --tw-shadow: 1px 1px 2px #ddd;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 

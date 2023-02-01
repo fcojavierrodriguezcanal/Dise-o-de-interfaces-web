@@ -9,11 +9,11 @@
     <title>segundo ejercicio Tailwind</title>
     <style></style>
   </head>
-  <body>
+  <body style="background-image: url('./imgs/pattern.png')">
     <header id="header" class="fuente1 h-20 w-full bg-black text-white">
       <div class="w-wrap">
         <div id="logo" class="group bg-blue-ocean transition-all-300ms float-left mt-5 ml-5 block w-48 cursor-pointer overflow-hidden text-center tracking-tight transition hover:rounded-sm hover:bg-gray-200 hover:text-black">
-          <span class="gear group-hover:animate-fromBelow inline-block animate-spin text-3xl">S</span>
+          <span class="gear fuentesimbolo group-hover:animate-fromBelow inline-block animate-spin text-3xl">S</span>
           <h3 class="transition duration-100 group-hover:animate-fromRight float-right mt-1 mr-16 block text-4xl transition">BLOG</h3>
         </div>
         <nav id="menu" class="float-right h-20 bg-transparent mt-5 mr-50 flex-row">
@@ -36,49 +36,50 @@
     </header>
     <section class="wrap wrap-content">
       <section id="info">
-        <div id="banner" class="align-center flex h-32 items-center justify-center border-8 border-white shadow-md" style="background-image: url('imgs/bakbaner.png')" ;>
-            <h1 class="font-bebas text-4xl text-white shadow-md">CURSOS DE DESARROLLO WEB</h1>
+        <div id="banner" class="animate-backBanner align-center flex h-32 items-center justify-center border-8 border-white shadow-md m-5 m-auto " style="background-image: url('imgs/bakbaner.png')" ;>
+            <h1 class="fuente1 text-4xl text-white shadow-md">CURSOS DE DESARROLLO WEB</h1>
           </div>
       </section>
     </section>
      <div id="cards">
 
-                <div class="card">
-                    <p class="icon">H</p>
-                    <h2 class="category">Desarrollo Web</h2>
-                    <p class="description">
+                <div class="card group float-left m-6 mt-10 w-52 h-80 border-solid border cartashadow transition-all cursor-pointer bg-white hover:bg-black">
+                    <p class="icon fuentesimbolo w-full h-32 text-5xl text-center m-auto m-0 group-hover:animate-showIcon group-hover:text-blue-ocean hover:text-7xl">H</p>
+                    <h2 class="category w-full h-12 text-2xl font-bold text-center group-hover:text-white group-hover:animate-showCategory ">Desarrollo Web</h2>
+                    <p class="fuente2 text-center text-blue-ocean text-xl transition-all group-hover:text-white group-hover:animate-showDescription">
                         Aprende los principales lenguajes para desarrollar webs ¡Conviertete en un webmaster!
                     </p>
                 </div>
 
-                <div class="card">
-                    <p class="icon">_</p>
-                    <h2 class="category">Sistemas operativos</h2>
-                    <p class="description">
-                        Aprende a administrar sisteams Linux y Windows
+                
+                <div class="card group float-left m-6 mt-10 w-52 h-80 border-solid border cartashadow transition-all cursor-pointer bg-white hover:bg-black">
+                    <p class="icon fuentesimbolo w-full h-32 text-5xl text-center m-auto m-0 group-hover:animate-showIcon group-hover:text-blue-ocean hover:text-7xl">_</p>
+                    <h2 class="category w-full h-12 text-2xl font-bold text-center group-hover:text-white group-hover:animate-showCategory ">Sistemas operativos</h2>
+                    <p class="fuente2 text-center text-blue-ocean text-xl transition-all group-hover:text-white group-hover:animate-showDescription">
+                        Aprende a administrar sistemas Linux y Windows
                     </p>
                 </div>
 
-                <div class="card">
-                    <p class="icon">S</p>
-                    <h2 class="category">Hardware</h2>
-                    <p class="description">
+                <div class="card group float-left m-6 mt-10 w-52 h-80 border-solid border cartashadow transition-all cursor-pointer bg-white hover:bg-black">
+                    <p class="icon fuentesimbolo w-full h-32 text-5xl text-center m-auto m-0 group-hover:animate-showIcon group-hover:text-blue-ocean hover:text-7xl">S</p>
+                    <h2 class="category w-full h-12 text-2xl font-bold text-center group-hover:text-white group-hover:animate-showCategory ">Hardware</h2>
+                    <p class="fuente2 text-center text-blue-ocean text-xl transition-all group-hover:text-white group-hover:animate-showDescription">
                         Conoce los entresijos del hardware
                     </p>
                 </div>
 
-                <div class="card">
-                    <p class="icon">u</p>
-                    <h2 class="category">Redes e Internet</h2>
-                    <p class="description">
+                <div class="card group float-left m-6 mt-10 w-52 h-80 border-solid border cartashadow transition-all cursor-pointer bg-white hover:bg-black">
+                    <p class="icon fuentesimbolo w-full h-32 text-5xl text-center m-auto m-0 group-hover:animate-showIcon group-hover:text-blue-ocean hover:text-7xl">u</p>
+                    <h2 class="category w-full h-12 text-2xl font-bold text-center group-hover:text-white group-hover:animate-showCategory ">Redes e Internet</h2>
+                    <p class="fuente2 text-center text-blue-ocean text-xl transition-all group-hover:text-white group-hover:animate-showDescription">
                         Aprende a configurar y administrar redes informáticas y servidores
                     </p>
                 </div>
 
-                <div class="card">
-                    <p class="icon">a</p>
-                    <h2 class="category">Bases de datos</h2>
-                    <p class="description">
+                <div class="card group float-left m-6 mt-10 w-52 h-80 border-solid border cartashadow transition-all cursor-pointer bg-white hover:bg-black">
+                    <p class="icon fuentesimbolo w-full h-32 text-5xl text-center m-auto m-0 group-hover:animate-showIcon group-hover:text-blue-ocean hover:text-7xl">a</p>
+                    <h2 class="category w-full h-12 text-2xl font-bold text-center group-hover:text-white group-hover:animate-showCategory">Bases de datos</h2>
+                    <p class="fuente2 text-center text-blue-ocean text-xl transition-all group-hover:text-white group-hover:animate-showDescription">
                         Aprende a montar y administrar bases de datos
                     </p>
                 </div>
@@ -90,9 +91,9 @@
 
         <!--Inicio Barra lateral-->
         <div class="clearfix"></div>
-        <aside id="lateral">
+        <aside id="lateral" class="w-80 fuente2 float-right m-5">
 
-            <h3>BUSCAR</h3>
+            <h3 class="fuente1 block w-auto h-11 text-3xl tracking-wide	pl-3.5 mt-7 mb-3" style="background: url(./imgs/pxgray.png);">BUSCAR</h3>
             <div id="search">
                 <form>
                     <input type="text" />

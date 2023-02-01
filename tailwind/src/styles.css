@@ -7,9 +7,36 @@
     src: url("./fonts/BebasNeue.otf");
     
 }
+@font-face{
+    font-family: "websymbols";
+    src: url("./fonts/websymbols-regular-webfont.ttf");
+    
+}
+@font-face{
+    font-family: "TrebuchetMS";
+    src: url('./fonts/TrebuchetMS.ttf');
+}
 .fuente1{
     font-family: "BebasNeue";
 }
+.fuente2{
+    font-family: "TrebuchetMS";
+}
+.fuentesimbolo{
+    font-family: "websymbols";
+}
 .bannerfondo{
 background-image: url(./imgs/bakbaner.png);
+}
+@keyframes animate-backBanner{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -200px -200px;
+    }
+}
+
+.animate-backBanner{
+    animation: backBanner 10s linear;
 }
